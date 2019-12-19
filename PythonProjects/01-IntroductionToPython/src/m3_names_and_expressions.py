@@ -91,6 +91,14 @@ print(answer * 100)
 #   After you have written and run the code to learn the TYPE
 #   of each of the above, change the above _TODO_ to DONE.
 ###############################################################################
+print(type(27//5))
+x = 27 //5
+y = 27 % 5
+z = 2 ** 3
+z = z + 12
+z = z * 3
+
+print(x, y, z)
 
 ###############################################################################
 # TODO: 6.
