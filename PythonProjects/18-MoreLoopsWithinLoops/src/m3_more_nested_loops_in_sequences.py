@@ -16,8 +16,8 @@ def main():
     print()
     print("Un-comment and re-comment calls in MAIN one by one as you work.")
 
-    run_test_largest_number()
-    run_test_largest_negative_number()
+    #run_test_largest_number()
+    #run_test_largest_negative_number()
     run_test_first_is_elsewhere_too()
 
 
@@ -731,6 +731,16 @@ def first_is_elsewhere_too(seq_seq):
     #   in this problem, as doing so may defeat the goal of providing
     #   practice at loops within loops (within loops within ...)
     # -------------------------------------------------------------------------
+
+    if seq_seq is None:
+        return False
+    if len(seq_seq) == 0:
+        return False
+
+
+    for k in range(len(seq_seq[0])):
+        for j in range(len(seq_seq[k])):
+            print(seq_seq[k][j])
 
 
 ###############################################################################

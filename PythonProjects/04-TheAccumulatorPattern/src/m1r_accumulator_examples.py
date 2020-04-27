@@ -5,15 +5,15 @@ This module demonstrates the ACCUMULATOR pattern in three classic forms:
    IN GRAPHICS:   x = x + pixels
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher, Mark Hays,
-         Derek Whitley, their colleagues, and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         Derek Whitley, their colleagues, and Vibha.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ##############################################################################
-# TODO: 2. Read the following, then change its _TODO_ to DONE.
+# DONE: 2. Read the following, then change its _TODO_ to DONE.
 #   Throughout these exercises, you must use  RANGE  statements.
 #   At this point of the course, you are restricted to the SINGLE-ARGUMENT
 #   form of RANGE statements, like this:
-#      range(blah):
+#      range(x + y - z * 7):
 #   There is a MULTIPLE-ARGUMENT form of RANGE statements (e.g. range(a, b))
 #   but you are NOT permitted to use the MULTIPLE-ARGUMENT form yet, for
 #   pedagogical reasons.  Change the above _TODO_ to DONE after reading this.
@@ -38,39 +38,41 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher, Mark Hays,
 #          which of the following three choices would you use?
 #  ___
 #            for k in range(r - 1):
-#            for k in range(r):
+#            for k in range(r): <- THIS IS THE RIGHT ANSWER
 #            for k in range(r + 1):
 #     ___
 #     b. If you want a loop that runs from 0 to s, inclusive,
 #          what expression would you use in the _____ below?
 #  ___
-#            for k in range(_____):
+#            for k in range(s+1):
 #     ___
 #     c. If you want a loop that runs from r to s, inclusive, assuming s >= r,
 #          what expression would you use in the _____ below?
 #  ___
-#            for k in range(_____):
+#            for k in range((s+1)-r):         4, 5, 6, 7......(7+1) - 4.....
 #     ___
 #     d. If you want a loop that runs from (r + 4) to (s - 10),
 #          including the (r + 4) but not including the (s - 10),
 #          what expression would you use in the _____ below?
 #  ___
-#            for k in range(_____):
+#            for k in range((s-10) - (r+4)):         4, 5, 6 ..... 7 - 4....
 #     ___
 #     e. The following code snippet attempts to return the number
 #          of integers from r to s, inclusive, whose cosines are positive.
 #          It has at least 5 distinct errors (one per line).
 #          Correct the errors.
 #  ___
-#              for k in range(r - s):
-#                  count = 0
-#                  if math.cos(r) > 0:
-#                      count = 1
-#                  return count
+#
+#               count = 0
+#               for k in range((s + 1) - r):
+#                  if math.cos(k) > 0:
+#                      count = count + 1
+#               return count
 #     ___
 #     f. The code in the "graphics accumulation" example below includes:
 #            for _ in range(n):
 #        What does the   _   (underscore) mean?
+#       we aren't using k
 #     ___
 #     g. The code in the "graphics accumulation" example below includes:
 #  ___
